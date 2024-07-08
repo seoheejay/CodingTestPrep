@@ -1,0 +1,28 @@
+#난이도 1, 시간 제한 1초, 메모리 제한 128MB, 기출 2019 국가 교육기관 코딩 테스트
+
+# 각 행마다 가장 작은 수를 찾은 뒤에 그 수 중에서 가장 큰 수를 찾는 아이디어가 필요하다
+
+## min()함수 이용하는 답안
+n, m = map(int, input().split())
+result = 0
+
+for i in range(n):
+  data = list(map(int, input().split()))
+  min_value = min(data)
+  result = max(result, min_value)
+
+print(result)
+
+
+## 2중 반복문 구조 이용하는 답안
+n, m = map(int, input().split())
+result = 0
+
+for i in range(n):
+  data = list(map(int, input().split()))
+  min_value = 10001
+  for a in data:
+    min_value = min(min_value,a)
+  result = max(result, min_value)
+
+print(result)
