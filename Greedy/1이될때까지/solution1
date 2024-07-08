@@ -1,0 +1,18 @@
+#난이도 1, 시간 제한 1초, 메모리 제한 128MB, 기출 2018 E 기업 알고리즘 대회
+n,k = map(int, input().split())
+count = 0
+
+while n>=k:
+  if n%k==0:
+    n //= k
+  else :
+    n -= 1
+  count+=1
+
+while n>1:
+  n -= 1
+  count +=1
+
+print(count)
+
+#N이 100억 이상 큰 수가 되는 경우를 가정했을 때에도 빠르게 동작하려면 N이 K의 배수가 되도록 효율적으로 한 번에 빼는 방식으로 소스코드를 작성 가능 > solution2 참고
