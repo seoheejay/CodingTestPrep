@@ -1,0 +1,19 @@
+#난이도 1.5 시간 제한 1초, 메모리 제한 128MB
+
+
+############################################
+#이진탐색 코드 > base 참조
+
+#n,m input()코드, array, x변수에 list(~)코드 구현하면 됨
+#이때 array.sort() 이진 탐색 수행하기 위해 사전에 정렬 수행 !!
+
+
+#손님이 확인 요청한 부품 번호를 하나씩 확인
+for i in x:
+  #해당 부품이 존재하는지 확인
+  result = binary_search(array, i, 0, n-1)
+  if result != None:
+    print('yes', end=' ')
+
+  else:
+    print('no', end=' ')
