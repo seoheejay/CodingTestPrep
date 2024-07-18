@@ -1,0 +1,19 @@
+# 난이도 1, 시간제한 2초, 메모리 제한 128MB, 기출 국제 알고리즘 대회
+
+
+n,k = map(int, input().split())
+
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+a.sort()
+b.sort(reverse = True) #내림차순
+
+#첫 번째 인덱스부터 확인하며, 두 배열의 원소를 최대 K번 비교
+for i in range(k):
+  if a[i]<b[i]:
+    a[i],b[i] = b[i],a[i]
+  else:
+    break
+
+print(sum(a))
