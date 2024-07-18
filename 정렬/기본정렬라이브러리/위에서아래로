@@ -1,0 +1,15 @@
+#난이도 1, 시간 제한 1초, 메모리 제한 128MB, 기출 T 기업 코딩 테스트
+
+
+n = int(input())
+
+array = []
+for i in range(n):
+  array.append(int(input()))
+
+
+array = sorted(array, reverse=True)
+
+for i in array:
+  print(i, end=' ')
+
