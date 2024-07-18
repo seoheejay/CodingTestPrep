@@ -1,4 +1,4 @@
-#난이도 1.5 시간 제한 1초, 메모리 제한 128MB, 199p(이진탐색으로도 구현 가능)
+#난이도 1.5 시간 제한 1초, 메모리 제한 128MB, 199p(이진탐색으로도 구현 가능), 집합 자료형으로도 풀 수 있다
 
 n = int(input())
 array = [0]*1000001
@@ -14,7 +14,7 @@ x = list(map(int, input().split()))
 
 #손님이 확인 요청한 부품 번호를 하나씩 확인
 for i in x:
-  if i in array:
+  if array[i] == 1: 
     print('yes', end=' ')
 
   else:
