@@ -1,0 +1,14 @@
+#난이도 2, 시간제한 1초, 메모리 제한 128MB
+
+n = int(input())
+array = list(map(int,input().split()))
+#d에다가 결과 저장하기 위해 초기화
+d = [0]*100
+#보텀업
+d[0] = array[0]
+d[1] = max(array[0],arry[1])
+
+for i in range(2,n):
+  d[i] = max(d[i-1],d[i-2]+arrary[i])
+
+print(d[n-1])
