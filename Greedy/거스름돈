@@ -1,0 +1,32 @@
+#거스름돈
+a = int(input()) #1,300
+money_list = [500,100,50,10]
+cnt = 0
+
+for coin in money_list:
+  count+=a//coin
+  a%=coin
+#화폐종류가 K개라고 할 때, 화폐종류만큼 반복 수행해야하므로 시간 복잡도는 O(K)
+'''
+while a>0:
+  if a>=500:
+    cnt+=a//500
+    a%=500 #a==300
+    continue
+  elif a>=100:
+    cnt+=a//100
+    a%=100
+    continue
+  elif a>=50:
+    cnt+=a//50
+    a%=50
+    continue
+  elif a>=10:
+    cnt+=a//10
+    a%=10
+    break
+'''
+print(cnt)
+
+##이게 성립하는 이유는 큰 단위가 작은 단위의 배수 형태이므로 가능함
+##예를 들어, 800원이 있고 500,400,100원이 있다면 500,100,100,100보다는 400,400이 나음
